@@ -3,6 +3,7 @@ import { injectCss } from './styles/injector'
 import { defaultCssTheme } from './styles/theme-default'
 import { escapeHtml } from './utils/html-escape'
 import Prism from 'prismjs'
+import "prismjs/components/prism-radlex";
 
 export default class CodeFlask {
   constructor (selectorOrElement, opts) {
@@ -100,16 +101,17 @@ export default class CodeFlask {
     this.opts.areaId = this.opts.areaId || null
     this.opts.ariaLabelledby = this.opts.ariaLabelledby || null
     this.opts.readonly = this.opts.readonly || null
+    this.opts.wordwrap = this.opts.wordwrap || false
 
     // if handleTabs is not either true or false, make it true by default
     if (typeof this.opts.handleTabs !== 'boolean') {
       this.opts.handleTabs = true
     }
-    // if handleTabs is not either true or false, make it true by default
+    // if handleSelfClosingCharacters is not either true or false, make it true by default
     if (typeof this.opts.handleSelfClosingCharacters !== 'boolean') {
       this.opts.handleSelfClosingCharacters = true
     }
-    // if handleTabs is not either true or false, make it true by default
+    // if handleNewLineIndentation is not either true or false, make it true by default
     if (typeof this.opts.handleNewLineIndentation !== 'boolean') {
       this.opts.handleNewLineIndentation = true
     }

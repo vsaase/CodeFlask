@@ -51,7 +51,7 @@ export const editorCss = `
     padding: 10px;
     font-size: ${FONT_SIZE};
     line-height: ${LINE_HEIGHT};
-    white-space: pre-wrap;
+    white-space: pre;
     position: absolute;
     top: 0;
     left: 0;
